@@ -7,7 +7,8 @@ Built with a scalable SaaS mindset using React + Vite + Tailwind CSS, and deploy
 ✨ Live Demo
 
 🔗 Deployed on Vercel
-(Replace with your actual link)
+(https://repostai-one.vercel.app/)
+
 
 🧠 Problem
 
@@ -20,6 +21,7 @@ Maintain format differences (X threads vs LinkedIn vs Instagram)
 Do it quickly
 
 RepostAI solves this in seconds.
+
 
 💡 Features
 🎯 Core Features
@@ -42,6 +44,7 @@ Big “Generate” button
 
 Output display section
 
+
 🆓 Freemium Model (Frontend MVP)
 
 3 free generations per day
@@ -54,6 +57,7 @@ Friendly upgrade message:
 
 “Upgrade for unlimited access”
 
+
 💳 Pricing Section
 Free Plan
 
@@ -62,6 +66,7 @@ Free Plan
 Basic generation
 
 Browser-based tracking
+
 
 Premium – $9/month
 
@@ -73,6 +78,7 @@ Future: Priority AI model access
 
 Future: Saved history
 
+
 🌟 Fake Testimonials (UI section)
 
 “Saved me hours of content repurposing.”
@@ -82,6 +88,7 @@ Future: Saved history
 “Simple, fast, powerful.”
 
 🛠 Tech Stack
+
 
 ⚛️ React (Vite)
 
@@ -93,14 +100,7 @@ Future: Saved history
 
 ▲ Deployed on Vercel
 
-📦 Project Structure
-src/
- ├── components/
- │    ├── Generator.tsx
- │    ├── Pricing.tsx
- │    └── Testimonials.tsx
- ├── App.tsx
- └── main.tsx
+
 🧪 Current Status
 
 ⚠️ This is currently a Frontend MVP
@@ -124,13 +124,12 @@ Phase 1 (Next)
 
  Add loading state
 
- Add copy-to-clipboard button
-
  Improve output formatting
+
 
 Phase 2
 
- Add authentication (JWT / Clerk / Supabase)
+ Add authentication (JWT )
 
  Store generation history
 
@@ -139,6 +138,7 @@ Phase 2
  Server-side usage tracking
 
  Upgrade flow
+
 
 Phase 3
 
@@ -151,6 +151,7 @@ Phase 3
  Analytics dashboard
 
  Team plans
+
 
 🧑‍💻 Local Development
 
@@ -182,25 +183,6 @@ Deploy
 
 No environment variables required (for current MVP).
 
-⚠️ Limitations
-
-Freemium limit can be bypassed by clearing browser storage.
-
-No real AI processing yet.
-
-Not production-ready billing.
-
-📈 Future Vision
-
-RepostAI aims to become:
-
-A full AI-powered content repurposing SaaS
-
-Creator-focused
-
-Subscription-based
-
-Multi-platform optimized
 
 🤝 Contributing
 
