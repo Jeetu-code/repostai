@@ -157,8 +157,7 @@ Phase 3
 
 Clone the repository:
 
-git clone https://github.com/your-username/repostai.git
-cd repostai
+git clone https://github.com/Jeetu-code/repostai.git
 
 Install dependencies:
 
