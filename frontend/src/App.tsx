@@ -49,18 +49,18 @@ menulist.map((list)=>( <li  className={`text-center my-2 rounded-md h-8 flex ite
 {/*hero section*/}
    <div className=" flex  flex-col">
 	<div className="p-2    mx-auto flex flex-col items-center">
-<div className=" max-w-60 font-bold text-xs sm:max-w-80 sm:text-base   bg-linear-to-r from-gray-200 via-w to-gray-200 mb-5 rounded-full py-1 px-3   border border-gray-300">
+<div className=" max-w-50 text-center font-bold text-xs sm:max-w-80 sm:text-base   bg-linear-to-r from-gray-200 via-w to-gray-200 mb-5 rounded-full py-1 px-3   border border-gray-300">
 <span className="flex gap-2  justify-center bg-linear-to-r from-blue-500 to-purple-500 bg-clip-text text-transparent items-center ">
 <LuSparkles className="text-indigo-500 w-5 h-auto"/> AI-Powered Content Engine</span></div>
 
-<div className=" text-3xl max-w-80 sm:text-4xl sm:max-w-90 sm:text-pretty md:text-5xl md:max-w-lg text-center">
+<div className=" text-xl max-w-50 sm:text-4xl sm:max-w-90 sm:text-pretty md:text-5xl md:max-w-lg text-center">
 <div className="font-extrabold">Repurpose content for social in <span className="bg-linear-to-r from-blue-500 to-purple-500 bg-clip-text text-transparent">seconds</span></div>
 </div>
 
-<div className="mt-4 text-gray-500 text-center text-balance  max-w-lg sm:max-w-xl "><span>Stop starting from scratch. Paste your blog post, newsletter, or rough thoughts and let our AI instantly format it for your favorite platforms.</span></div>
+<div className="mt-4 text-gray-500 text-center text-balance  max-w-70 sm:max-w-xl "><span>Stop starting from scratch. Paste your blog post, newsletter, or rough thoughts and let our AI instantly format it for your favorite platforms.</span></div>
 
 {/* contentGenerator */}
-<div id="generate" >
+<div id="generate" className="">
 <Generator />
 </div>
 
@@ -68,8 +68,8 @@ menulist.map((list)=>( <li  className={`text-center my-2 rounded-md h-8 flex ite
 {/* Pricing section */}
 <div id="pricing" className="mt-45 w-full  ">
 <div className="mb-8  flex flex-col items-center">
-<div className="mb-2 font-bold text-4xl">Simple, transparent pricing</div>
-<div className="text-lg text-gray-600">Choose the plan that's rignt for your content needs</div>
+<div className="mb-2 text-center font-bold text-3xl sm:text-4xl">Simple, transparent pricing</div>
+<div className="text-sm sm:text-lg text-gray-600">Choose the plan that's rignt for your content needs</div>
 </div>
 
 <div className="mt-20  flex flex-col items-center md:flex-row md:justify-center gap-8">

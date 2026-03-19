@@ -17,7 +17,7 @@ const premiumoffers=[
 ]
 return(
 <>
-<div className={`relative ${offerprop === "Free"? "flex flex-col gap-2  bg-white w-sm h-auto p-8 rounded-3xl ":"flex flex-col gap-2  bg-white w-sm h-auto p-8 rounded-3xl border-2 border-indigo-700"}`}>
+<div className={`relative ${offerprop === "Free"? "flex flex-col gap-2  bg-white max-w-sm sm:w-sm h-auto p-8 rounded-3xl ":"flex flex-col gap-2  bg-white max-w-sm sm:w-sm  h-auto p-9 rounded-3xl border-2 border-indigo-700"}`}>
 {offerprop === "Free"?"":(
 <div className="w-full flex justify-center">
 <div className=" absolute -top-4 rounded-xl bg-indigo-700 text-white flex justify-center font-bold w-fit px-2 py-1"> Most Popular </div>

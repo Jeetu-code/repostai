@@ -20,7 +20,7 @@ GitHub Actions, GitLab CI, Jenkins, CircleCI, or something else?`;
 
 return(
 <>
-<div className="w-auto mx-auto max-w-xl sm:max-w-2xl  lg:max-w-4xl">
+<div className="w-auto mx-auto max-w-sm sm:px-2 sm:max-w-2xl  lg:max-w-4xl">
 <div className=" border-b-2 border-gray-300    font-bold text-2xl">
 <div className="mb-3 flex gap-3 items-center"><FaClockRotateLeft className="text-gray-500 h-4 w-auto"/> Recently Generated</div></div>
 <div className=" lg:grid lg:grid-cols-2 gap-3 ">
