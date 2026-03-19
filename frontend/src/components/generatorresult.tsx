@@ -29,7 +29,7 @@ return(
 <>
 <div className="h-auto">
 {/* Generated Result */}
-<div className="bg-white rounded-2xl  p-8 mt-4">
+<div className="bg-white rounded-2xl p-5 max-w-70 sm:max-w-md md:max-w-lg sm:p-5 mt-4">
 <div className="flex justify-between items-center">
 <div className="flex mb-3 gap-2 items-center"> 
 {
