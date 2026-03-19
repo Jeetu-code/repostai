@@ -44,7 +44,7 @@ response();
 
 return(
 <>
-<div className="mt-20 w-full sm:w-xl md:w-3xl lg:w-4xl  mx-auto  bg-white rounded-2xl h-auto px-9 shadow-xl">
+<div className="mt-20 w-70 sm:w-xl md:w-3xl lg:w-4xl  mx-auto  bg-white rounded-2xl h-auto px-9 shadow-xl">
 
 {isvalid ?<div className="text-xs sm:text-sm text-balance bg-red-100 py-5 px-3 border-2 border-red-200 rounded-2xl mb-8">
 
