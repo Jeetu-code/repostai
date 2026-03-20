@@ -10,11 +10,11 @@ function App() {
 const [isopen,setIsOpen]=useState(false);
 
 
-const menulist=[{id:1,name:"Generator"},{id:2,name:"Pricing"},{id:3,name:"Testimonials"},];
+const menulist=[{id:1,name:"Generator",to:"/#generate"},{id:2,name:"Pricing",to:"/#pricing"},{id:3,name:"Testimonials",to:"/#testimonial"},];
   return (
     <>
     <div className="min-h-screen pb-24 bg-linear-to-b from-white from-10% via-purple-100 via-50% to-white  ">
-    <nav className="p-5  flex items-center place-content-between">
+    <nav className="relative p-5  flex items-center place-content-between">
     <div className="flex text-xl bg-linear-to-r from-blue-500 to-purple-500 bg-clip-text text-transparent items-center gap-2  font-extrabold">
     <div className="text-white bg-linear-to-b from-blue-500 to-purple-500  rounded-xl px-2 py-2">
 	<Layers />
@@ -35,17 +35,18 @@ const menulist=[{id:1,name:"Generator"},{id:2,name:"Pricing"},{id:3,name:"Testim
     </nav>
 
 {/* mobile menubar */}
-<div className={`sm:hidden flex justify-center bg-white mx-2 rounded-xl ${isopen?"":"hidden"}`}>
+<div className={` absolute  z-50  max-w-full h-full bg-white   sm:hidden flex  items-start justify-center  px-5   ${isopen?"":"hidden"}`}>
+<div className={` w-full  sm:hidden flex  justify-center bg-white px-3 rounded-xl  ${isopen?"":"hidden"}`}>
 <ul className=" w-xl py-2  px-2">
 {
 isopen && (
-menulist.map((list)=>( <li  className={`text-center my-2 rounded-md h-8 flex items-center justify-center transition-all duration-100 ease-in-out bg-gray-100 text-black active:bg-gray-200  `} key={list.id} >{list.name}</li>
+menulist.map((list)=>( <li  className={` text-center my-2 rounded-md h-8 flex items-center justify-center transition-all duration-100 ease-in-out bg-gray-100 text-black active:bg-gray-200  `} key={list.id} ><Link to={list.to} onClick={()=>setIsOpen(false)}>{list.name}</Link></li>
 ))
 )
 }
 </ul>
 </div>
-
+</div>
 {/*hero section*/}
    <div className=" flex  flex-col">
 	<div className="p-2    mx-auto flex flex-col items-center">

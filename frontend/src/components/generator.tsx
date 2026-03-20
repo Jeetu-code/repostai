@@ -44,7 +44,7 @@ response();
 
 return(
 <>
-<div className="mt-20 w-70 sm:w-xl md:w-3xl lg:w-4xl  mx-auto  bg-white rounded-2xl h-auto px-9 shadow-xl">
+<div className="mt-20 w-75 sm:w-xl md:w-3xl lg:w-4xl  mx-auto  bg-white rounded-2xl h-auto px-9 shadow-xl">
 
 {isvalid ?<div className="text-xs sm:text-sm text-balance bg-red-100 py-5 px-3 border-2 border-red-200 rounded-2xl mb-8">
 
@@ -59,8 +59,8 @@ return(
 <div className="text-gray-500">{limit} free left today</div>
 </div>
 
-<div className="  rounded-2xl border-2 border-gray-300 mt-4">
-<textarea className="bg-gray-100 w-full outline-offset-1  outline-blue-sky-500   rounded-2xl resize-none px-3 py-3 " placeholder={"Paste your blog post, article, or raw thoughts here..."}  rows={9} cols={5} onChange={(e)=>setdraftContent(e.target.value)} />
+<div className="  rounded-2xl   mt-4">
+<textarea className="bg-gray-100 w-full outline-none border-2 focus:border-indigo-300 border-gray-200  rounded-2xl resize-none px-3 py-3 " placeholder={"Paste your blog post, article, or raw thoughts here..."}  rows={9} cols={5} onChange={(e)=>setdraftContent(e.target.value)} />
 </div>
 {isempty && (<div className="text-red-500">Content cannot be empty</div>)}
 <div className="mt-5">
