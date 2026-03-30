@@ -1,10 +1,10 @@
-const baseUrl:string= "http://localhost:5678/webhook-test/4a30c090-c706-49bc-a4b5-7d13bf29173d"
+const baseUrl= import.meta.env.VITE_API_URL;
 
 type requestprop={
-endpoint:string;
-content:string;
+post:string;
+platform:string;
 }
-export async function Apirequest({endpoint,content}:requestprop){
-const result = await fetch(`${baseUrl+endpoint}`,{method:"POST",body:JSON.stringify({content})});
+export async function Apirequest({post,platform}:requestprop){
+const result = await fetch(`${baseUrl}`,{method:"POST",body:JSON.stringify({post:post,platform:platform}),headers:{"Content-Type":"Application/json"}});
 return result;
 }

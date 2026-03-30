@@ -10,43 +10,39 @@ import  {Apirequest} from "../api/fetch.ts";
 
 export default function Generator(){
 const [clicked,setClicked] = useState(false);
-const [content,setContent]=useState<string>("");
 const [draftcontent,setdraftContent]=useState<string>("");
 const [draftplatform,setdraftPlatform] = useState<names>("Linkedin Post");
 const [platform,setPlatform] = useState<names>("Linkedin Post");
 const [limit,setlimit]=useState<number>(3);
+const [outputContent,setOutputContent] = useState<string>("");
 const [isempty,setisEmpty] = useState(false);
 const isvalid=limit===0;
-function onhandledata(){
+
+async function onhandledata(){
 if(draftcontent === ""){
 setisEmpty(true);
 return;
 }
-setisEmpty(false);
-setContent(draftcontent)
 
-setPlatform(draftplatform)
+setisEmpty(false);
 setClicked(true);
 setlimit(limit-1);
-}
-
-useEffect(()=>{
-if(!content)return;
-const response= async ()=>{
 try{
-const returneddata = await Apirequest({endpoint:"/",content:content});
-console.log(returneddata);
-}catch(err){console.log(err)};
-}
-response();
-},[clicked]);
+const returneddata = await Apirequest({post:draftcontent,platform:draftplatform});
+const parseddata = await returneddata.json();
 
+console.log(parseddata.airesponse);
+setPlatform(draftplatform);
+setOutputContent(parseddata.airesponse.replace(/\*\*---___/g,"").replace(/\*/g,"").replace(/\#+\s/g,""));
+}catch(err){console.log(err)};
+
+}
 
 return(
 <>
 <div className="mt-20 w-75 sm:w-xl md:w-3xl lg:w-4xl  mx-auto  bg-white rounded-2xl h-auto px-9 shadow-xl">
-
-{isvalid ?<div className="text-xs sm:text-sm text-balance bg-red-100 py-5 px-3 border-2 border-red-200 rounded-2xl mb-8">
+{
+isvalid ?<div className="text-xs sm:text-sm text-balance bg-red-100 py-5 px-3 border-2 border-red-200 rounded-2xl mb-8">
 
 <div className="flex  text-red-500 font-bold justify-between">
 <span className="flex gap-4 items-center"><BsExclamationCircle className="h-5 w-auto "/> Limit hit!</span>
@@ -73,6 +69,7 @@ return(
 <option value="X Thread">X Thread</option>
 <option value="Instagram Caption">Instagram Caption</option>
 </select>
+
 <button onClick={onhandledata} disabled={isvalid} className={` ${!isvalid?"cursor-pointer shadow-xl/20  bg-indigo-800 transition duration-200 ease-in-out hover:-translate-y-1 hover:scale-101 hover:shadow-xl/30 active:scale-100 active:translate-y-1 active:shadow-xl/10":"cursor-not-allowed bg-indigo-500 "}  text-sm sm:text-lg flex my-3 text-white font-bold rounded-xl gap-2 w-full  sm:w-3/5 items-center justify-center   h-10 sm:h-15 sm:ml-3   `}>Generate Magic <ArrowRight/></button> </div>
 </div>
 
@@ -85,8 +82,8 @@ return(
 <span className="flex text-2xl gap-2 font-bold items-center ">
 <LuSparkles className="text-blue-800"/> Your Result</span>
 
-
-<GenResult socialplatform={platform} post={content} />
+{outputContent && <GenResult socialplatform={platform} post={outputContent} />
+}
 </div>
 )}
 </>
