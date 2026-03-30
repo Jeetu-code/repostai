@@ -1,7 +1,7 @@
 import {MessageSquare,ArrowRight} from "lucide-react";
 import {LuSparkles} from "react-icons/lu";
 import GenResult from "./generatorresult.tsx";
-import {useState,useEffect} from "react";
+import {useState} from "react";
 import {BsExclamationCircle} from "react-icons/bs";
 type names ="Instagram Caption" | "X Thread" | "Linkedin Post";
 import {HashLink as Link} from "react-router-hash-link";
